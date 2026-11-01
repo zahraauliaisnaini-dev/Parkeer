@@ -189,7 +189,7 @@ def render_sesi(sesi: str):
     st.markdown(h, unsafe_allow_html=True)
 
     st.markdown(
-        '<p class="catatan">Angka besar = estimasi slot kosong.</p>",
+        '<p class="catatan">Angka besar = estimasi slot kosong.</p>',
         unsafe_allow_html=True,
     )
 

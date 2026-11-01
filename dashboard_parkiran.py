@@ -24,7 +24,7 @@ import streamlit as st
 CSV_PATH = "hasil_v3.csv"
 TZ = ZoneInfo("Asia/Jakarta")           # ganti kalau perlu, mis. "Asia/Makassar"
 
-st.set_page_config(page_title="Kondisi Parkiran Motor", page_icon="🏍️", layout="wide")
+st.set_page_config(page_title="Parkeer", page_icon="🏍️", layout="wide")
 
 # ----------------------------------------------------------------------- gaya
 st.markdown(
@@ -35,9 +35,10 @@ st.markdown(
 html, body, [class*="css"], .stApp, button, input, select, textarea {
     font-family: 'Poppins', sans-serif !important;
 }
-.block-container { padding-top: 2rem; max-width: 1250px; }
+.block-container { padding-top: 4.5rem; max-width: 1250px; }
 
-.judul { font-size: 1.9rem; font-weight: 700; margin: 0; }
+.judul { font-size: 2.2rem; font-weight: 700; margin: 0; line-height: 1.2; }
+.subjudul { font-size: 1rem; font-weight: 500; opacity: .7; margin: 2px 0 0; }
 .update {
     display: inline-block; margin-top: 6px; padding: 6px 14px;
     border-radius: 999px; background: #eef1f5; color: #333;
@@ -48,12 +49,12 @@ html, body, [class*="css"], .stApp, button, input, select, textarea {
 .ringkas { display: flex; gap: 14px; flex-wrap: wrap; margin: 18px 0 6px; }
 .ringkas .k {
     flex: 1; min-width: 160px; padding: 14px 18px; border-radius: 12px;
-    background: #fff; border: 1px solid #e3e6ea;
+    background: #fff; color: #1d1d1d; border: 1px solid #e3e6ea;
 }
 .ringkas .k .v { font-size: 1.7rem; font-weight: 700; line-height: 1.2; }
 .ringkas .k .l { font-size: .8rem; color: #666; }
 
-.legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: .82rem; color: #444; margin: 8px 0 18px; }
+.legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: .82rem; opacity: .85; margin: 8px 0 18px; }
 .legend span i {
     display: inline-block; width: 12px; height: 12px; border-radius: 3px;
     margin-right: 6px; vertical-align: -1px;
@@ -74,7 +75,7 @@ table.grid td.sebagian { background: #fde8a8; }
 table.grid td.banyak   { background: #b8e6b8; }
 table.grid td.kosongdata { background: #f0f0f0; color: #888; }
 
-.catatan { font-size: .78rem; color: #666; margin-top: 4px; }
+.catatan { font-size: .78rem; opacity: .75; margin-top: 4px; }
 
 </style>
 """,
@@ -132,7 +133,10 @@ else:
     st.stop()
 
 # -------------------------------------------------------------------- header
-st.markdown('<p class="judul">Kondisi Parkiran Motor</p>', unsafe_allow_html=True)
+st.markdown(
+    '<p class="judul">Parkeer</p><p class="subjudul">Kondisi Parkiran Motor</p>',
+    unsafe_allow_html=True,
+)
 st.markdown(
     f'<span class="update">Data diperbarui: <b>{waktu_data.strftime("%d %b %Y, %H:%M")} '
     f'{waktu_data.tzname()}</b> &nbsp;|&nbsp; sumber: {asal}</span>',

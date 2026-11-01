@@ -189,8 +189,7 @@ def render_sesi(sesi: str):
     st.markdown(h, unsafe_allow_html=True)
 
     st.markdown(
-        '<p class="catatan">Angka besar = estimasi slot kosong (akurasi sekitar &plusmn;1 motor per blok). '
-        "Blok padat di malam hari bisa terhitung lebih kosong dari kenyataan.</p>",
+        '<p class="catatan">Angka besar = estimasi slot kosong.</p>",
         unsafe_allow_html=True,
     )
 

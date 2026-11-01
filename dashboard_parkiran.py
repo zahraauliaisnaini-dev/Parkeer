@@ -37,7 +37,7 @@ html, body, [class*="css"], .stApp, button, input, select, textarea {
 }
 .block-container { padding-top: 4.5rem; max-width: 1250px; }
 
-.judul { font-size: 2.2rem; font-weight: 700; margin: 0; line-height: 1.2; }
+.judul { font-size: 3.5rem; font-weight: 700; margin: 0; line-height: 1.15; }
 .subjudul { font-size: 1rem; font-weight: 500; opacity: .7; margin: 2px 0 0; }
 .update {
     display: inline-block; margin-top: 6px; padding: 6px 14px;

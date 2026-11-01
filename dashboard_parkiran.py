@@ -134,7 +134,7 @@ else:
 
 # -------------------------------------------------------------------- header
 st.markdown(
-    '<p class="judul">Parkeer</p><p class="subjudul">Kondisi Parkiran Motor</p>',
+    '<div class="judul">Parkeer</div><div class="subjudul">Kondisi Parkiran Motor</div>',
     unsafe_allow_html=True,
 )
 st.markdown(
